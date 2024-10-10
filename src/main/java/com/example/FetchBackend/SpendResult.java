@@ -5,6 +5,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * This class represents the result of spending points, including the payer and the points deducted.
+ *
+ * Attributes:
+ * - payer: The name of the payer from whom the points were deducted.
+ * - points: The number of points that were spent.
+ */
+
 @Getter
 @Setter
 @NoArgsConstructor

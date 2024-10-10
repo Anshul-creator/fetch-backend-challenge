@@ -59,7 +59,7 @@ This endpoint allows you to spend points using the FIFO approach. You provide th
 }
 
 #### Response:
-- Status: `200 OK` on success.
+- Status: `200 OK` on success, `400 Bad Request` if amount to be spent is more than user points.
 - Example Response:
 [
   { "payer": "DANNON", "points": -100 },
