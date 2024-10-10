@@ -27,8 +27,8 @@ This project is a solution to the Fetch Backend Internship Challenge. The projec
    git clone https://github.com/Anshul-creator/fetch-backend-challenge
 
 2. Build and run the application:
-   ./gradlew bootRun
-   This will start the application on http://localhost:8000.
+   - ./gradlew bootRun
+   - This will start the application on http://localhost:8000.
 
 ## API Endpoints
 
