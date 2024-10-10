@@ -1,0 +1,33 @@
+This is the summary.txt file to answer the questions in the Fetch Backend Internship Challenge
+
+1. Why did you choose the tools, libraries, and language you used for the coding exercise?
+I used Java as it is one of the most widely-used programming languages for backend development. 
+At my internship opportunity at Infodat International Inc., I worked to develop server-side functionalities in Java and hence
+I was familiar with the Spring Boot framework and how to implement it in Java, so that also contributed in my choice of language.
+Libraries:
+Spring Boot: As mentioned above, I chose Spring Boot because I have some experience working in it and hence it was easier for 
+me to work in it.
+Lombok: When I worked at my internship, we used this library to write the constructors, getters, and setters 
+for us to reduce boilerplate code and make the codebase more readable.
+Gradle: I used Gradle as the build tool for dependency management and automating the build process.
+
+2. What are the advantages and disadvantages of your solution?
+Advantages:
+Scalability: The solution can easily scale as the number of transactions grows due to use of Spring Boot.
+Maintainability: The code is modular, with separate components for adding points, spending points, and retrieving the balance.
+
+Disadvantages:
+Memory Usage: Storing all transactions in memory (using a List<Transaction>) may become inefficient as the number of transactions grows.
+Single User: The solution is currently designed for a single user, and extending it for multiple users would require additional logic (possibly a database).
+
+3. What has been a favorite school/personal project thus far? What about it challenged you?
+My favorite project was developing the Badgeroo App, a roommate-finding application designed to help users find compatible roommates 
+based on shared preferences. What made this project exciting for me was the combination of solving a real-world problem and the technical challenges it involved. 
+I worked on both the front-end and back-end, using Android Studio to build a user-friendly mobile interface and 
+Firebase for handling real-time user data and authentication.
+
+One of the most challenging aspects was managing the chat feature, where users could communicate within the app once matched. 
+This required integrating real-time messaging capabilities, which I implemented using Firebase.
+
+This project pushed me to improve my skills in mobile development and real-time data handling. 
+It was incredibly rewarding to see the app come together as a complete solution for users looking for roommates.
