@@ -18,12 +18,66 @@ This project is a solution to the Fetch Backend Internship Challenge. The projec
 ## Prerequisites
 
 - **Java 17** must be installed and set as the default JVM.
-- **Gradle** is used for building the project (a Gradle wrapper is included, so no need to install Gradle globally).
+- **Gradle** is used for building the project.
 - **Postman** or **curl** for testing the API endpoints.
 
 ## Setup Instructions
 
 1. Clone this repository:
-   ```bash
-   git clone <your-repo-url>
-   cd <your-repo-directory>
+   git clone https://github.com/Anshul-creator/fetch-backend-challenge
+
+2. Build and run the application:
+   ./gradlew bootRun
+   This will start the application on http://localhost:8000.
+
+## API Endpoints
+
+### 1. Add Transaction
+**POST** `/add`
+
+This endpoint allows you to add a transaction for a payer with the specified points and timestamp.
+
+#### Request Body (JSON):
+{
+  "payer": "DANNON",
+  "points": 300,
+  "timestamp": "2022-10-31T10:00:00Z"
+}
+
+#### Response:
+- Status: `200 OK` on success.
+
+### 2. Spend Points
+
+**POST** `/spend`
+
+This endpoint allows you to spend points using the FIFO approach. You provide the number of points you want to spend, and the response shows how those points were deducted from different payers.
+
+#### Request Body (JSON):
+{
+  "points": 5000
+}
+
+#### Response:
+- Status: `200 OK` on success.
+- Example Response:
+[
+  { "payer": "DANNON", "points": -100 },
+  { "payer": "UNILEVER", "points": -200 },
+  { "payer": "MILLER COORS", "points": -4700 }
+]
+
+### Check Balance
+
+**GET** `/balance`
+
+This endpoint returns the current balance of points for each payer.
+
+#### Response:
+- Status: `200 OK` on success.
+- Example Response:
+{
+  "DANNON": 1000,
+  "UNILEVER": 0,
+  "MILLER COORS": 5300
+}
